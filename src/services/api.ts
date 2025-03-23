@@ -84,6 +84,7 @@ export const sendChatMessage = async (
       
       const chunk = decoder.decode(value, { stream: true });
       fullResponse += chunk;
+      console.log(fullResponse)
       onChunkReceived(chunk);
     }
     
