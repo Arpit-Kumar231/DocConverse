@@ -10,7 +10,6 @@ import Footer from '@/components/Footer';
 
 const Index: React.FC = () => {
   return (
-    <ChatProvider>
       <div className="min-h-screen flex flex-col">
         <NavBar />
         
@@ -35,7 +34,6 @@ const Index: React.FC = () => {
               
               <div className="space-y-8 max-w-4xl mx-auto">
                 <FileUpload />
-                <ChatInterface />
                 <HistoryView />
               </div>
             </div>
@@ -100,7 +98,6 @@ const Index: React.FC = () => {
         
         <Footer />
       </div>
-    </ChatProvider>
   );
 };
 

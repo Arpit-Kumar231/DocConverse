@@ -98,11 +98,9 @@ const ChatInterface: React.FC = () => {
   if (!chatThreadId) {
     return null;
   }
-  console.log(messages)
   
   return (
-    <div className="w-full max-w-3xl mx-auto flex flex-col h-[600px] rounded-xl overflow-hidden border border-metal-light/20 metal-surface shadow-inner-light">
-      {/* Chat header */}
+    <div className="w-full max-w-5xl mx-auto flex flex-col h-[800px] rounded-xl overflow-hidden border border-metal-light/20 metal-surface shadow-inner-light mt-24">
       <div className="p-4 border-b border-metal-light/20 backdrop-blur-md">
         <div className="flex items-center">
           <div className="w-8 h-8 rounded-full bg-neon-blue/20 flex items-center justify-center mr-3">

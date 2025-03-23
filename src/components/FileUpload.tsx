@@ -4,6 +4,7 @@ import { Upload, CheckCircle, XCircle, FileText, Loader2 } from 'lucide-react';
 import { toast } from 'sonner';
 import { processDocument, startChatSession } from '@/services/api';
 import { useChatContext } from '@/context/ChatContext';
+import { useNavigate } from 'react-router-dom';
 
 const FileUpload: React.FC = () => {
   const { 
@@ -18,6 +19,7 @@ const FileUpload: React.FC = () => {
   const [file, setFile] = useState<File | null>(null);
   const [isDragging, setIsDragging] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
+  const navigate = useNavigate();
 
   const handleDragOver = (e: React.DragEvent<HTMLDivElement>) => {
     e.preventDefault();
@@ -56,17 +58,17 @@ const FileUpload: React.FC = () => {
       setIsProcessing(true);
       setProcessingError(null);
       
-      // Process document
       toast.info('Processing document...', { duration: 2000 });
       const assetId = await processDocument(file);
       setAssetId(assetId);
       
-      // Start chat session
       toast.info('Starting chat session...', { duration: 2000 });
       const chatThreadId = await startChatSession(assetId);
       setChatThreadId(chatThreadId);
       
       toast.success('Document processed successfully!', { duration: 3000 });
+      navigate('/chat')
+
     } catch (error) {
       console.error('Upload error:', error);
       setProcessingError(error instanceof Error ? error.message : 'Failed to process document');
