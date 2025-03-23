@@ -16,7 +16,6 @@ const App = () => (
       <ChatProvider>
         <Toaster />
         <Sonner position="top-right" closeButton />
-
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Index />} />
