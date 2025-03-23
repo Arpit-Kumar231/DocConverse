@@ -7,21 +7,17 @@ const Footer: React.FC = () => {
     <footer className="w-full py-12 border-t border-metal-light/20 mt-20">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Logo & Description */}
           <div className="space-y-4">
             <div className="flex items-center">
-              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-neon-blue to-neon-purple flex items-center justify-center shine-effect shadow-neon">
-                <span className="text-white font-bold text-lg">M</span>
-              </div>
-              <h2 className="ml-3 text-xl font-semibold text-gradient">Momentum RAG</h2>
+              <h2 className="text-xl font-semibold text-gradient">Momentum RAG</h2>
             </div>
             <p className="text-metal-light">
               Advanced document processing and chat interface powered by AI. Upload any document and start conversing with its content.
             </p>
             <div className="flex space-x-4 pt-2">
-              <SocialLink href="https://github.com" icon={<Github size={18} />} />
+              <SocialLink href="https://github.com/Arpit-Kumar231" icon={<Github size={18} />} />
               <SocialLink href="https://twitter.com" icon={<Twitter size={18} />} />
-              <SocialLink href="mailto:contact@example.com" icon={<Mail size={18} />} />
+              <SocialLink href="mailto:ak30062004@gmail.com" icon={<Mail size={18} />} />
             </div>
           </div>
           
@@ -35,15 +31,7 @@ const Footer: React.FC = () => {
             </ul>
           </div>
           
-          <div>
-            <h3 className="text-white font-medium mb-4">Resources</h3>
-            <ul className="space-y-2">
-              <FooterLink href="#" external>API Documentation</FooterLink>
-              <FooterLink href="#" external>Developer Guide</FooterLink>
-              <FooterLink href="#">Privacy Policy</FooterLink>
-              <FooterLink href="#">Terms of Service</FooterLink>
-            </ul>
-          </div>
+          
         </div>
         
         <div className="mt-12 pt-6 border-t border-metal-light/20 text-center text-metal-light text-sm">
