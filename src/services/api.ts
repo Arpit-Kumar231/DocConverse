@@ -1,5 +1,5 @@
 
-const BASE_URL = 'https://momentum-rag.onrender.com';
+const BASE_URL = import.meta.env.VITE_BASE_URL;
 
 export const processDocument = async (file: File): Promise<string> => {
   try {
