@@ -42,4 +42,4 @@ jobs:
         run: npm run build
 
       - name: Simulated Deploy Step
-        run: echo "Deployment simulated: Your app would be deployed here."
+        run: echo 'Deployment simulated: Your app would be deployed here.'
